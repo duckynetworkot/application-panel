@@ -10,7 +10,7 @@
 // ==============================
 
 const validStaffIDs = [
-    "BFH-001",
+    "1567",
     "BFH-002",
     "BFH-003",
     "BFH-MANAGER",
