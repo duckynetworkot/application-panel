@@ -4,13 +4,19 @@ fetch("applications.json")
   .then(data => renderCards(data.Applications))
   .catch(err => console.error("Error loading applications.json:", err));
 
-const appsContainer = document.getElementById("apps");
-const panel = document.getElementById("panel");
-const panelTitle = document.getElementById("panel-title");
-const panelQuestions = document.getElementById("panel-questions");
+// Correct element IDs to match index.html
+const appsContainer = document.getElementById("grid");
+const panel = document.getElementById("applicationPanel");
+const panelTitle = document.getElementById("appTitle");
+const panelQuestions = document.getElementById("qList");
+
+const submitBtn = document.getElementById("submitApp");
+const closeBtn = document.getElementById("closePanel");
+const clearBtn = document.getElementById("demoClear");
 
 let activeApp = null;
 
+// Render cards in the grid
 function renderCards(apps) {
   appsContainer.innerHTML = "";
 
@@ -18,6 +24,9 @@ function renderCards(apps) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
+      <div class="thumb">
+        <img src="${app.frontImage}" alt="Preview">
+      </div>
       <div class="meta">
         <h3>${app.title}</h3>
         <p class="desc">${app.description}</p>
@@ -30,7 +39,7 @@ function renderCards(apps) {
   });
 }
 
-// Open the question panel
+// Open panel and display questions
 function openPanel(app) {
   activeApp = app;
   panelTitle.textContent = app.title;
@@ -47,16 +56,17 @@ function openPanel(app) {
   });
 
   panel.classList.remove("hidden");
+  window.scrollTo({ top: panel.offsetTop, behavior: "smooth" });
 }
 
 // Close panel
-function closePanel() {
+closeBtn.onclick = () => {
   panel.classList.add("hidden");
   activeApp = null;
-}
+};
 
 // Submit answers
-function submitApp() {
+submitBtn.onclick = () => {
   const answers = [...panelQuestions.querySelectorAll("textarea")].map(t => t.value.trim());
 
   if (answers.some(a => a.length === 0)) {
@@ -65,5 +75,11 @@ function submitApp() {
   }
 
   alert("Application submitted!");
-  closePanel();
-}
+  panel.classList.add("hidden");
+};
+
+// Clear answers button
+clearBtn.onclick = () => {
+  [...document.querySelectorAll("textarea")].forEach(t => t.value = "");
+  alert("Answers cleared.");
+};
