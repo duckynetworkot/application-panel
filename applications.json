@@ -20,22 +20,23 @@
       ]
     },
     {
-      "title": "Builder",
-      "description": "Create builds for events and showcases.",
-      "frontImage": "https://picsum.photos/seed/builder/800/400",
+      "title": "Embalmer",
+      "description": "Apply for the ability to Embalm deceased.",
+      "frontImage": "https://imgs.search.brave.com/FG1t4EYX2pRHsFHJNUFDupk92i4nLHUl9utl_ohm4Xo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM0LzIwLzk1/LzM2MF9GXzgzNDIw/OTUxOV9qTHFiRDJI/NDJjQVlSYW4wNXBH/d0luaHRKR0NmUWxl/ZC5qcGc",
       "questions": [
-        "What is your experience with building?",
-        "Share a link to your portfolio or previous builds."
+        "What is your DISCORD username? (Your USERNAME, NOT Displayname)",
+        "What is your ROBLOX username? (Your USERNAME, NOT Displayname)",
+        "Do you have any previous Embalming experience?",
+        "Why do you want to be an Embalmer for BFH?",
+        "How long have you been playing Bloxburg?",
+        "Are you familiar with the basics of Bloxburg?",
+        "Do you understand asking about the status of your Application will result in the immediate denial of it?",
+        "Do you understand you will have to go through training, and proper licensing before being able to embalm deceased?",
+        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team?",
+        "Do you understand that you will always respect your higher ups?",
+        "Do you think you have tried your best on this Application and are ready to submit?",
+        "Any Notes you would like to add?"
       ]
     },
-    {
-      "title": "Event Host",
-      "description": "Run and host events for the community.",
-      "frontImage": "https://picsum.photos/seed/event/800/400",
-      "questions": [
-        "Have you hosted events before? Describe one.",
-        "What ideas would you bring to our event schedule?"
-      ]
-    }
   ]
 }
