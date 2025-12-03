@@ -3,40 +3,40 @@
     {
       "title": "Funeral Staff",
       "description": "Help Funeral Directors, Help Manage Funerals, and assist where needed.",
-      "frontImage": "https://imgs.search.brave.com/jq3cvEo_0tD9L-YTafxMASu3nUeRfeKoO1bEDN5tHSo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXJw/LmNkbi13ZWJzaXRl/LmNvbS83ZjljMDYw/Zi9kbXMzcmVwL211/bHRpL29wdC9ocC1j/dGEtc2VydmljZU9w/dGlvbnMtNDA1dy5q/cGc",
+      "frontImage": "https://imgs.search.brave.com/jq3cvEo_0tD9L-YTafxMASu3nUeRfeKoO1bEDN5tHSo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXJwLmNkbi13ZWJzaXRlLmNvbS83ZjljMDYwZi9kbXMzcmVwL211bHRpL29wdC9ocC1jdGEtc2VydmljZU9wdGlvbnMtNDA1dy5qcGc",
       "questions": [
-        "What is your DISCORD username? (Your USERNAME, NOT Displayname)",
-        "What is your ROBLOX username? (Your USERNAME, NOT Displayname)",
-        "Do you have any previous Funeral Staffing experience?",
-        "Why do you want to be Funeral Staff for BFH?",
-        "How long have you been playing Bloxburg?",
-        "Are you familiar with the basics of Bloxburg?",
-        "Do you understand asking about the status of your Application will result in the immediate denial of it?",
-        "Do you understand you will have to go through training, and proper licensing before being able to staff at services?",
-        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team?",
-        "Do you understand that you will always respect your higher ups?",
-        "Do you think you have tried your best on this Application and are ready to submit?",
-        "Any Notes you would like to add?"
+        "What is your DISCORD username? (Your USERNAME, NOT Displayname) | true",
+        "What is your ROBLOX username? (Your USERNAME, NOT Displayname) | true",
+        "Do you have any previous Funeral Staffing experience? | true",
+        "Why do you want to be Funeral Staff for BFH? | true",
+        "How long have you been playing Bloxburg? | true",
+        "Are you familiar with the basics of Bloxburg? | true",
+        "Do you understand asking about the status of your Application will result in the immediate denial of it? | true",
+        "Do you understand you will have to go through training, and proper licensing before being able to staff at services? | true",
+        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team? | true",
+        "Do you understand that you will always respect your higher ups? | true",
+        "Do you think you have tried your best on this Application and are ready to submit? | true",
+        "Any Notes you would like to add? | false"
       ]
     },
     {
       "title": "Embalmer",
       "description": "Apply for the ability to Embalm deceased.",
-      "frontImage": "https://imgs.search.brave.com/FG1t4EYX2pRHsFHJNUFDupk92i4nLHUl9utl_ohm4Xo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM0LzIwLzk1/LzM2MF9GXzgzNDIw/OTUxOV9qTHFiRDJI/NDJjQVlSYW4wNXBH/d0luaHRKR0NmUWxl/ZC5qcGc",
+      "frontImage": "https://imgs.search.brave.com/FG1t4EYX2pRHsFHJNUFDupk92i4nLHUl9utl_ohm4Xo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5mdGNkbi5uZXQvanBnLzA4LzM0LzIwLzk1LzM2MF9GXzgzNDIwOTUxOV9qTHFiRDJINDJjQVlSYW4wNXBHd0luaHRKR0NmUWxlZC5qcGc",
       "questions": [
-        "What is your DISCORD username? (Your USERNAME, NOT Displayname)",
-        "What is your ROBLOX username? (Your USERNAME, NOT Displayname)",
-        "Do you have any previous Embalming experience?",
-        "Why do you want to be an Embalmer for BFH?",
-        "How long have you been playing Bloxburg?",
-        "Are you familiar with the basics of Bloxburg?",
-        "Do you understand asking about the status of your Application will result in the immediate denial of it?",
-        "Do you understand you will have to go through training, and proper licensing before being able to embalm deceased?",
-        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team?",
-        "Do you understand that you will always respect your higher ups?",
-        "Do you think you have tried your best on this Application and are ready to submit?",
-        "Any Notes you would like to add?"
+        "What is your DISCORD username? (Your USERNAME, NOT Displayname) | true",
+        "What is your ROBLOX username? (Your USERNAME, NOT Displayname) | true",
+        "Do you have any previous Embalming experience? | true",
+        "Why do you want to be an Embalmer for BFH? | true",
+        "How long have you been playing Bloxburg? | true",
+        "Are you familiar with the basics of Bloxburg? | true",
+        "Do you understand asking about the status of your Application will result in the immediate denial of it? | true",
+        "Do you understand you will have to go through training, and proper licensing before being able to embalm deceased? | true",
+        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team? | true",
+        "Do you understand that you will always respect your higher ups? | true",
+        "Do you think you have tried your best on this Application and are ready to submit? | true",
+        "Any Notes you would like to add? | false"
       ]
-    },
+    }
   ]
 }
