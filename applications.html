@@ -1,67 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Applications — Bloxburg Funeral Home</title>
-<link rel="stylesheet" href="/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Applications — Bloxburg Funeral Home</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-<div class="wrap">
-<header class="header nav-wrap">
-<div class="brand">
-<div class="logo" id="logo">AP</div>
-<div>
-<h1>Applications Panel</h1>
-<p class="lead">Choose an application, fill the questions and submit.</p>
-</div>
-</div>
+  <div class="wrap">
+    <header class="header nav-wrap">
+      <div class="brand">
+        <div class="logo" id="logo">AP</div>
+        <div>
+          <h1>Applications Panel</h1>
+          <p class="lead">Choose an application, fill the questions and submit.</p>
+        </div>
+      </div>
 
+      <nav class="top-nav">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./applications.html" class="nav-link active">Applications</a>
+        <a href="./staff.html" class="nav-link">Staff</a>
+        <a href="./planning.html" class="nav-link">Planning</a>
+      </nav>
+    </header>
 
-<nav class="top-nav">
-<a href="/index.html">Home</a>
-<a href="/applications.html" class="active">Applications</a>
-<a href="/staff.html">Staff</a>
-<a href="/planning.html">Planning</a>
-</nav>
-</header>
+    <main>
+      <section class="notice" id="notice">Tip: If you wish to restart the Application, click the "Clear Answers" button on the top right of the page.</section>
 
+      <section class="apps-section">
+        <div class="section-header">
+          <h2>Available Applications</h2>
+        </div>
 
-<main>
-<section class="apps-section">
-<div class="section-header">
-<h2>Available Applications</h2>
-</div>
+        <div id="grid" class="grid"></div>
+      </section>
 
+      <section id="applicationPanel" class="panel hidden">
+        <div class="panel-header">
+          <h3 id="appTitle">Application</h3>
+          <button id="closePanel" class="btn secondary">Close</button>
+        </div>
 
-<div id="grid" class="grid"></div>
-</section>
+        <div id="qList" class="questions"></div>
 
+        <div class="panel-actions">
+          <button id="submitApp" class="btn">Submit Application</button>
+          <div id="submitMsg" class="muted small"></div>
+        </div>
+      </section>
+    </main>
 
-<section id="applicationPanel" class="panel hidden">
-<div class="panel-header">
-<h3 id="appTitle">Application</h3>
-<button id="closePanel" class="btn secondary">Close</button>
-</div>
+    <footer class="footer muted">
+      2025 • Bloxburg Funeral Home • All rights reserved
+    </footer>
+  </div>
 
-
-<div id="qList" class="questions"></div>
-
-
-<div class="panel-actions">
-<button id="submitApp" class="btn">Submit Application</button>
-<div id="submitMsg" class="muted small"></div>
-</div>
-</section>
-</main>
-
-
-<footer class="footer muted">
-2025 • Bloxburg Funeral Home • All rights reserved
-</footer>
-</div>
-
-
-<script src="/assets/script.js" defer></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
