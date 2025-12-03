@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications Panel</title>
 
-    <!-- Load Google Font -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Link your stylesheet -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,13 +18,16 @@
         <h1 class="title">Applications Panel</h1>
         <p class="subtitle">A clean and modern panel to manage applications.</p>
 
+        <!-- Applications list section -->
         <section id="apps-section">
             <h2 class="section-title">Available Applications</h2>
+
             <div id="applications-list" class="card-list">
-                <!-- Dynamically filled by script.js -->
+                <!-- Populated by script.js -->
             </div>
         </section>
 
+        <!-- Application panel (hidden by default) -->
         <section id="app-view" class="hidden">
             <h2 class="section-title">Application</h2>
 
@@ -32,8 +35,10 @@
                 <!-- Filled by script.js -->
             </div>
 
-            <button id="closeApp" class="btn secondary">Close</button>
-            <button id="submitApp" class="btn">Submit Application</button>
+            <div class="button-row">
+                <button id="closeApp" class="btn secondary">Close</button>
+                <button id="submitApp" class="btn">Submit Application</button>
+            </div>
         </section>
 
     </div>
