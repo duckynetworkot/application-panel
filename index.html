@@ -1,58 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Applications Panel</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Panel</title>
+
+    <!-- Load Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link your stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="header">
-      <div class="brand">
-        <div class="logo">AP</div>
-        <div>
-          <h1>Applications Panel</h1>
-          <p class="lead">Static, modern panel — load applications from <code>applications.json</code>.</p>
-        </div>
-      </div>
-      <div class="top-actions">
-        <button id="demoClear" class="btn secondary">Clear Answers</button>
-      </div>
-    </header>
 
-    <main>
-      <section class="notice" id="notice">Tip: This is a static demo. “Submit” stores answers locally (demo).</section>
+    <div class="container fade-in">
 
-      <section class="apps-section">
-        <div class="section-header">
-          <h2>Available Applications</h2>
-          <span class="muted">Loaded from <code>applications.json</code></span>
-        </div>
+        <h1 class="title">Applications Panel</h1>
+        <p class="subtitle">A clean and modern panel to manage applications.</p>
 
-        <div id="grid" class="grid"></div>
-      </section>
+        <section id="apps-section">
+            <h2 class="section-title">Available Applications</h2>
+            <div id="applications-list" class="card-list">
+                <!-- Dynamically filled by script.js -->
+            </div>
+        </section>
 
-      <section id="applicationPanel" class="panel hidden">
-        <div class="panel-header">
-          <h3 id="appTitle">Application</h3>
-          <button id="closePanel" class="btn secondary">Close</button>
-        </div>
+        <section id="app-view" class="hidden">
+            <h2 class="section-title">Application</h2>
 
-        <div id="qList" class="questions"></div>
+            <div id="app-details" class="card">
+                <!-- Filled by script.js -->
+            </div>
 
-        <div class="panel-actions">
-          <button id="submitApp" class="btn">Submit Application</button>
-          <div id="submitMsg" class="muted small"></div>
-        </div>
-      </section>
-    </main>
+            <button id="closeApp" class="btn secondary">Close</button>
+            <button id="submitApp" class="btn">Submit Application</button>
+        </section>
 
-    <footer class="footer muted">
-      Built for GitHub Pages — static only.
-    </footer>
-  </div>
+    </div>
 
-  <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
