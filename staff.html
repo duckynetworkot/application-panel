@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Staff — Bloxburg Funeral Home</title>
+<link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+<header class="header nav-wrap">
+<div class="brand">
+<div class="logo" id="logo">AP</div>
+<div>
+<h1>Staff Panel</h1>
+</div>
+</div>
+
+
+<nav class="top-nav">
+<a href="/index.html">Home</a>
+<a href="/applications.html">Applications</a>
+<a href="/staff.html" class="active">Staff</a>
+<a href="/planning.html">Planning</a>
+</nav>
+</header>
+
+
+<main>
+<section id="staffAuth" class="panel">
+<h3>Staff Access</h3>
+<p class="desc">Enter your Staff ID to access staff tools.</p>
+<input id="staffIdInput" placeholder="Enter Staff ID" />
+<button id="staffAuthBtn" class="btn">Enter Staff Panel</button>
+<div id="staffAuthMsg" class="muted small"></div>
+</section>
+
+
+<section id="staffPanel" class="panel hidden">
+<div class="panel-header">
+<h3>Staff Dashboard</h3>
+</div>
+
+
+<nav id="staffNav" class="staff-nav">
+<button data-staff-action="home" class="btn secondary">Home</button>
+<button data-staff-action="clock" class="btn">Clock-In/Out</button>
+<button data-staff-action="docs" class="btn secondary">Documents</button>
+<button id="staffSignOut" class="btn secondary">Sign Out</button>
+</nav>
+
+
+<div id="staffContent" style="margin-top:12px"></div>
+</section>
+</main>
+
+
+<footer class="footer muted">
+2025 • Bloxburg Funeral Home • All rights reserved
+</footer>
+</div>
+
+
+<script src="/assets/script.js" defer></script>
+</body>
+</html>
