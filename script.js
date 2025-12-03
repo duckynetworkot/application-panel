@@ -1,142 +1,69 @@
-/* script.js
-   Static applications panel. Demo-only submission stores answers in localStorage.
-*/
+// Load applications.json and render cards
+fetch("applications.json")
+  .then(res => res.json())
+  .then(data => renderCards(data.Applications))
+  .catch(err => console.error("Error loading applications.json:", err));
 
-const APPS_JSON = 'applications.json';
-let currentApp = null;
+const appsContainer = document.getElementById("apps");
+const panel = document.getElementById("panel");
+const panelTitle = document.getElementById("panel-title");
+const panelQuestions = document.getElementById("panel-questions");
 
-// Helpers
-const $ = sel => document.querySelector(sel);
-const $$ = sel => Array.from(document.querySelectorAll(sel));
+let activeApp = null;
 
-async function loadApps(){
-  try{
-    const res = await fetch(APPS_JSON + '?_=' + Date.now());
-    if(!res.ok) throw new Error('Failed to fetch applications.json');
-    const data = await res.json();
-    return data.Applications || [];
-  }catch(err){
-    console.error(err);
-    document.getElementById('notice').textContent = 'Error loading applications.json — open console for details.';
-    return [];
-  }
+function renderCards(apps) {
+  appsContainer.innerHTML = "";
+
+  apps.forEach(app => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="meta">
+        <h3>${app.title}</h3>
+        <p class="desc">${app.description}</p>
+      </div>
+      <button class="btn" style="margin-top:10px;">Start Application</button>
+    `;
+
+    card.querySelector("button").onclick = () => openPanel(app);
+    appsContainer.appendChild(card);
+  });
 }
 
-function makeCard(app){
-  const card = document.createElement('div');
-  card.className = 'card';
+// Open the question panel
+function openPanel(app) {
+  activeApp = app;
+  panelTitle.textContent = app.title;
+  panelQuestions.innerHTML = "";
 
-  const thumb = document.createElement('div');
-  thumb.className = 'thumb';
-  const img = document.createElement('img');
-  img.src = app.frontImage || ('https://picsum.photos/seed/' + encodeURIComponent(app.title) + '/800/400');
-  img.alt = app.title;
-  thumb.appendChild(img);
+  app.questions.forEach(q => {
+    const div = document.createElement("div");
+    div.className = "q";
+    div.innerHTML = `
+      <div>${q}</div>
+      <textarea></textarea>
+    `;
+    panelQuestions.appendChild(div);
+  });
 
-  const meta = document.createElement('div');
-  meta.className = 'meta';
-  const title = document.createElement('h3');
-  title.textContent = app.title;
-  meta.appendChild(title);
-
-  const desc = document.createElement('div');
-  desc.className = 'desc';
-  desc.textContent = app.description || '';
-
-  const startRow = document.createElement('div');
-  startRow.className = 'start-row';
-  const startBtn = document.createElement('button');
-  startBtn.className = 'btn';
-  startBtn.textContent = 'Start Application';
-  startBtn.onclick = () => openApplication(app);
-  startRow.appendChild(startBtn);
-
-  card.appendChild(thumb);
-  card.appendChild(meta);
-  card.appendChild(desc);
-  card.appendChild(startRow);
-
-  return card;
+  panel.classList.remove("hidden");
 }
 
-function renderApps(list){
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  if(list.length === 0){
-    grid.innerHTML = '<div class="notice">No applications found in applications.json</div>';
+// Close panel
+function closePanel() {
+  panel.classList.add("hidden");
+  activeApp = null;
+}
+
+// Submit answers
+function submitApp() {
+  const answers = [...panelQuestions.querySelectorAll("textarea")].map(t => t.value.trim());
+
+  if (answers.some(a => a.length === 0)) {
+    alert("Please answer all questions before submitting.");
     return;
   }
-  list.forEach(app => grid.appendChild(makeCard(app)));
+
+  alert("Application submitted!");
+  closePanel();
 }
-
-// Panel (questions)
-function openApplication(app){
-  currentApp = app;
-  $('#appTitle').textContent = app.title;
-  const qList = $('#qList');
-  qList.innerHTML = '';
-  app.questions.forEach((q, idx) => {
-    const container = document.createElement('div');
-    container.className = 'q';
-    const label = document.createElement('div');
-    label.textContent = `${idx + 1}. ${q}`;
-    const ta = document.createElement('textarea');
-    ta.dataset.qidx = idx;
-    // Pre-fill if answers exist (demo)
-    const saved = getSavedAnswers(app.title);
-    if(saved && saved[idx]) ta.value = saved[idx];
-    container.appendChild(label);
-    container.appendChild(ta);
-    qList.appendChild(container);
-  });
-  $('#submitMsg').textContent = '';
-  $('#applicationPanel').classList.remove('hidden');
-  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-}
-
-function closeApplication(){
-  currentApp = null;
-  $('#applicationPanel').classList.add('hidden');
-}
-
-function getSavedAnswers(title){
-  try{
-    const key = 'app_answers_' + title;
-    return JSON.parse(localStorage.getItem(key) || 'null');
-  }catch(e){ return null }
-}
-
-function saveAnswers(title, answers){
-  try{
-    const key = 'app_answers_' + title;
-    localStorage.setItem(key, JSON.stringify(answers));
-  }catch(e){ console.warn('Could not save answers', e) }
-}
-
-function submitApplication(){
-  if(!currentApp) return;
-  const textareas = Array.from($('#qList textarea'));
-  const answers = textareas.map(t => t.value.trim());
-  // Demo behavior: save locally and show message
-  saveAnswers(currentApp.title, answers);
-  $('#submitMsg').textContent = 'Application submitted (demo). Answers saved locally.';
-  setTimeout(()=> $('#submitMsg').textContent = '', 3000);
-}
-
-// Demo: clear stored answers
-function clearStoredAnswers(){
-  const keys = Object.keys(localStorage).filter(k => k.startsWith('app_answers_'));
-  keys.forEach(k => localStorage.removeItem(k));
-  $('#notice').textContent = 'All saved demo answers cleared.';
-  setTimeout(()=> $('#notice').textContent = 'Tip: This is a static demo. “Submit” stores answers locally (demo).', 3000);
-}
-
-// Wire UI
-document.addEventListener('DOMContentLoaded', async () => {
-  const apps = await loadApps();
-  renderApps(apps);
-
-  $('#closePanel').addEventListener('click', closeApplication);
-  $('#submitApp').addEventListener('click', submitApplication);
-  $('#demoClear').addEventListener('click', clearStoredAnswers);
-});
