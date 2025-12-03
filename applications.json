@@ -1,13 +1,22 @@
 {
   "Applications": [
     {
-      "title": "Moderator",
-      "description": "Help moderate the community and enforce rules.",
-      "frontImage": "https://picsum.photos/seed/mod/800/400",
+      "title": "Funeral Staff",
+      "description": "Help Funeral Directors, Help Manage Funerals, and assist where needed.",
+      "frontImage": "https://imgs.search.brave.com/jq3cvEo_0tD9L-YTafxMASu3nUeRfeKoO1bEDN5tHSo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXJw/LmNkbi13ZWJzaXRl/LmNvbS83ZjljMDYw/Zi9kbXMzcmVwL211/bHRpL29wdC9ocC1j/dGEtc2VydmljZU9w/dGlvbnMtNDA1dy5q/cGc",
       "questions": [
-        "What is your age?",
-        "Why do you want this position?",
-        "Do you have previous moderation experience? If so, explain."
+        "What is your DISCORD username? (Your USERNAME, NOT Displayname)",
+        "What is your ROBLOX username? (Your USERNAME, NOT Displayname)",
+        "Do you have any previous Funeral Staffing experience?",
+        "Why do you want to be Funeral Staff for BFH?",
+        "How long have you been playing Bloxburg?",
+        "Are you familiar with the basics of Bloxburg?",
+        "Do you understand asking about the status of your Application will result in the immediate denial of it?",
+        "Do you understand you will have to go through training, and proper licensing before being able to staff at services?",
+        "Do you understand that recieving a total of 3 Write Ups will result in your Termination from the Staff Team?",
+        "Do you understand that you will always respect your higher ups?",
+        "Do you think you have tried your best on this Application and are ready to submit?",
+        "Any Notes you would like to add?"
       ]
     },
     {
