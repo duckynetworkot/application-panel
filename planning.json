@@ -1,0 +1,32 @@
+{
+  "Planning": [
+    {
+      "title": "Burial",
+      "description": "Burial planning request.",
+      "frontImage": "https://picsum.photos/seed/burial/1200/600",
+      "questions": [
+        "Client DISCORD username | true",
+        "Client ROBLOX username | true",
+        "Deceased Name | true",
+        "Preferred Burial Date | false",
+        "Coffin Type | true",
+        "Do you require additional services? | true",
+        "Any Notes | false"
+      ]
+    },
+    {
+      "title": "Cremation",
+      "description": "Cremation planning request.",
+      "frontImage": "https://picsum.photos/seed/cremation/1200/600",
+      "questions": [
+        "Client DISCORD username | true",
+        "Client ROBLOX username | true",
+        "Deceased Name | true",
+        "Preferred Cremation Date | false",
+        "Urn Preference | true",
+        "Do you require ashes returned? | true",
+        "Any Notes | false"
+      ]
+    }
+  ]
+}
