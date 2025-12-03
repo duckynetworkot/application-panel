@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Applications Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <h1>Applications Panel</h1>
+          <p class="lead">Static, modern panel — load applications from <code>applications.json</code>.</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="demoClear" class="btn secondary">Clear Answers</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="notice" id="notice">Tip: This is a static demo. “Submit” stores answers locally (demo).</section>
+
+      <section class="apps-section">
+        <div class="section-header">
+          <h2>Available Applications</h2>
+          <span class="muted">Loaded from <code>applications.json</code></span>
+        </div>
+
+        <div id="grid" class="grid"></div>
+      </section>
+
+      <section id="applicationPanel" class="panel hidden">
+        <div class="panel-header">
+          <h3 id="appTitle">Application</h3>
+          <button id="closePanel" class="btn secondary">Close</button>
+        </div>
+
+        <div id="qList" class="questions"></div>
+
+        <div class="panel-actions">
+          <button id="submitApp" class="btn">Submit Application</button>
+          <div id="submitMsg" class="muted small"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer muted">
+      Built for GitHub Pages — static only.
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

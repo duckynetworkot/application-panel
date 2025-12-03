@@ -1,0 +1,32 @@
+{
+  "Applications": [
+    {
+      "title": "Moderator",
+      "description": "Help moderate the community and enforce rules.",
+      "frontImage": "https://picsum.photos/seed/mod/800/400",
+      "questions": [
+        "What is your age?",
+        "Why do you want this position?",
+        "Do you have previous moderation experience? If so, explain."
+      ]
+    },
+    {
+      "title": "Builder",
+      "description": "Create builds for events and showcases.",
+      "frontImage": "https://picsum.photos/seed/builder/800/400",
+      "questions": [
+        "What is your experience with building?",
+        "Share a link to your portfolio or previous builds."
+      ]
+    },
+    {
+      "title": "Event Host",
+      "description": "Run and host events for the community.",
+      "frontImage": "https://picsum.photos/seed/event/800/400",
+      "questions": [
+        "Have you hosted events before? Describe one.",
+        "What ideas would you bring to our event schedule?"
+      ]
+    }
+  ]
+}
