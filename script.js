@@ -5,6 +5,17 @@
 // - Required-field enforcement
 // - Sends embed to the configured webhook and shows submitted summary
 // - Matches your index.html IDs
+// ==============================
+//  STAFF ID SYSTEM (MANUAL)
+// ==============================
+
+const validStaffIDs = [
+    "BFH-001",
+    "BFH-002",
+    "BFH-003",
+    "BFH-MANAGER",
+    "BFH-OWNER"
+];
 
 const WEBHOOK_URL = "https://discord.com/api/webhooks/1445633277322068040/qSCrO1nYIif4fP6EwzO6pLO9iHuPtGEIITR9lvQ5vqXxI_VkFhyhpXvhURoLpHD_F6Pn";
 const TOP_LOGO_DEFAULT = "https://cdn.discordapp.com/icons/1399923432161808515/b1e243e6ddcc36ce1adbf702ad5c34b6.webp?size=1024";
